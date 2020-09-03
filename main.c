@@ -3,8 +3,14 @@
 // Collaborator: Sujay Kandwal sfk5645@psu.edu
 // Collaborator: Nicholas George ntg5067@psu.edu
 #include <stdio.h>
+#include <stdlib.h>
+#include <readline/readline.h>
+
 
 int main(void) {
-  printf("Hello World\n");
+  char *temp = readline("Enter temperature in celsius: ");
+  double tempFloat = atof(temp);
+  double tempCtoF = (tempFloat*9/5+32);
+  printf(temp + "° in Celsius is equivalent to %f", tempFloat);
   return 0;
 }
